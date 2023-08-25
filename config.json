@@ -8,11 +8,13 @@
     },
     "translate": {
         "vi": {
-            "gui.externalExtension.YoloBitMqttExtension.name": "MQTT"
+            "gui.externalExtension.YoloBitMqttExtension.name": "MQTT",
+            "gui.externalExtension.YoloBitMqttExtension.description": "Mục mở rộng dành cho thư viện MQTT"
             
         },
         "en": {
-            "gui.externalExtension.YoloBitMqttExtension.name": "MQTT"
+            "gui.externalExtension.YoloBitMqttExtension.name": "MQTT",
+            "gui.externalExtension.YoloBitMqttExtension.description": "Extension for Yolobit's MQTT"
             
     }
 }
