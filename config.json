@@ -2,8 +2,8 @@
     "id": "YoloBitAIoTExtension",
     "extensionDisplay": {
         "name": "gui.externalExtension.YoloBitAIoTExtension.name",
-        "iconURL": "/images/aiot01.jpg",
-        "insetIconURL": "/images/aiot01.jpg",
+        "iconURL": "/images/mqtt01.jpg",
+        "insetIconURL": "/images/mqtt01.jpg",
         "description": "gui.externalExtension.YoloBitAIoTExtension.description"
     },
     "translate": {
