@@ -118,7 +118,7 @@ class Scratch3YoloBitMqtt {
                                 '/*{DO}*/' +
                                 '    pass\n',
                         setup: '',
-                        code: 'mqtt.on_receive_message(/*{TOPIC}*/, on_mqtt_message_receive_callback__V/*{FEEDS}*/_)',
+                        code: "mqtt.on_receive_message('V/*{FEEDS}*/', on_mqtt_message_receive_callback__V/*{FEEDS}*/_)",
                         loop: ''
                     },
                     text: [
