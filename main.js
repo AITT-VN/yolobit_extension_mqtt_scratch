@@ -1,4 +1,4 @@
-const iconURL = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzZweCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMzZweCIgZmlsbD0iI0ZGRkZGRiI+PHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xOCAxNi4wOGMtLjc2IDAtMS40NC4zLTEuOTYuNzdMOC45MSAxMi43Yy4wNS0uMjMuMDktLjQ2LjA5LS43cy0uMDQtLjQ3LS4wOS0uN2w3LjA1LTQuMTFjLjU0LjUgMS4yNS44MSAyLjA0LjgxIDEuNjYgMCAzLTEuMzQgMy0zcy0xLjM0LTMtMy0zLTMgMS4zNC0zIDNjMCAuMjQuMDQuNDcuMDkuN0w4LjA0IDkuODFDNy41IDkuMzEgNi43OSA5IDYgOWMtMS42NiAwLTMgMS4zNC0zIDNzMS4zNCAzIDMgM2MuNzkgMCAxLjUtLjMxIDIuMDQtLjgxbDcuMTIgNC4xNmMtLjA1LjIxLS4wOC40My0uMDguNjUgMCAxLjYxIDEuMzEgMi45MiAyLjkyIDIuOTIgMS42MSAwIDIuOTItMS4zMSAyLjkyLTIuOTJzLTEuMzEtMi45Mi0yLjkyLTIuOTJ6Ii8+PC9zdmc+';
+const iconURL = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYuMjEgMTk0LjciPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojZmZmZmZmO308L3N0eWxlPjwvZGVmcz48ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIj48ZyBpZD0iTGF5ZXJfMS0yIiBkYXRhLW5hbWU9IkxheWVyIDEiPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTEzNywwYzM3LjYyLjU3LDc3LjY5LDE2LjcyLDExMSw0OS4xMSwxMC40NCwxMC4xNCwxMC44LDI0LjM5LDEuMjQsMzQuMzdzLTIzLjkzLDEwLTM0LjM3LS4wOWMtMTQuMzktMTMuOTEtMzAuNzgtMjQuNTQtNTAtMzAtNDUuNjItMTMtODYuMTUtMy41Ny0xMjEuNjQsMjguMDYtNC4yMSwzLjc1LTkuNDEsNy4yLTE0LjczLDguN0MxOC40NCw5Myw4LjQ4LDg3Ljc4LDMuMiw3OC41Mi0xLjg2LDY5LjY3LTEsNTguNzYsNi4zMiw1MS4xOUExNjUuODksMTY1Ljg5LDAsMCwxLDI1LDM0LjYyQzU0Ljg0LDExLjgyLDkwLjYyLDAsMTM3LDBaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTI4LjEyLDczLjRjMjYuMTIuNjUsNDguNjksOS40Miw2Ny41MiwyNy4zNCwxMC43MSwxMC4yLDExLjM3LDI0LjU2LDEuNzUsMzQuNjgtOS40MSw5Ljg4LTIzLjY3LDEwLTM0LjM3LjE3LTIxLTE5LjIzLTQ4Ljc2LTE5LjI0LTY5Ljc2LDAtMTAuNzEsOS44LTI0LjkzLDkuNzMtMzQuMzgtLjE1LTkuNjQtMTAuMDktOS0yNC40NSwxLjczLTM0LjY2Qzc5LjU3LDgyLjcyLDEwMi4zMiw3NCwxMjguMTIsNzMuNFoiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xMjguMTYsMTk0LjdBMjMuNzUsMjMuNzUsMCwxLDEsMTUyLDE3MC44OCwyMy43NCwyMy43NCwwLDAsMSwxMjguMTYsMTk0LjdaIi8+PC9nPjwvZz48L3N2Zz4=';
 
 // Core, Team, and Official extension classes should be registered statically with the Extension Manager.
 // See: scratch-vm/src/extension-support/extension-manager.js
@@ -12,8 +12,8 @@ class Scratch3YoloBitMqtt {
             blockIconURI: iconURL,
             allowBlockTypes: {
             },
-            color1: '#44cbc6',
-            color2: '#44cbc6',
+            color1: '#e65722',
+            color2: '#e65722',
             blocks: [
                 {
                     opcode: 'mqtt_connect_wifi',
