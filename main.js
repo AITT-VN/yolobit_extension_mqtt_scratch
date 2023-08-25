@@ -11,7 +11,6 @@ class Scratch3YoloBitMqtt {
             name: 'MQTT',
             blockIconURI: iconURL,
             allowBlockTypes: {
-                aiot_ir_event: 1
             },
             color1: '#44cbc6',
             color2: '#44cbc6',
@@ -59,7 +58,8 @@ class Scratch3YoloBitMqtt {
                             defaultValue: 'tài khoản'
                         },
                         KEY: {
-                            type: Scratch.ArgumentType.STRING
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: 'key'
                         },
                         SERVER: {
                             menu: 'servers'
@@ -129,7 +129,7 @@ class Scratch3YoloBitMqtt {
                         '[DO]'
                     ],
                     arguments: {    
-                        TOPIC: {
+                        FEEDS: {
                             type: Scratch.ArgumentType.NUMBER,
                             defaultValue: 1
                         },                    
