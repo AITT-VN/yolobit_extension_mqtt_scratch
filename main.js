@@ -118,13 +118,13 @@ class Scratch3YoloBitMqtt {
                         function: 'def on_mqtt_message_receive_callback__topic_(th_C3_B4ng_tin):\n' +
                                 '/*{DO}*/' +
                                 '    pass\n',
-                        setup: 'mqtt.on_receive_message(/*{TOPIC}*/, on_mqtt_message_receive_callback__topic_)',
+                        setup: 'mqtt.on_receive_message(/*{TOPIC}*/, on_mqtt_message_receive_callback__/*{TOPIC}*/_)',
                         code: '',
                         loop: ''
                     },
                     text: [
                         {
-                            default: 'khi nhận được thông tin từ chủ đề [PIN] ',
+                            default: 'khi nhận được thông tin từ chủ đề [TOPIC] ',
                             id: 'gui.extension.YoloBitMqttExtension.mqtt_receie_topic'
                         },
                         '[DO]'
@@ -141,7 +141,24 @@ class Scratch3YoloBitMqtt {
                     disablePreviousStatement: false,
                     disableNextStatement: false,
                     blockType: Scratch.BlockType.CUSTOM
-                }           
+                },
+                {
+                    opcode: 'mqtt_message',
+                    rawCode: {
+                        code:'th_C3_B4ng_tin'
+                    },
+                    text: [
+                        {
+                            default: 'thông tin từ server',
+                            id: "gui.externalExtension.YoloBitMqttExtension.mqtt_message"
+                        }
+                    ],
+                    arguments: {
+                        
+                    },
+                    blockType: Scratch.BlockType.STRING
+                }
+
             ],
             menus:{                
                 servers: [
