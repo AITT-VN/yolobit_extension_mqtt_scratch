@@ -45,11 +45,11 @@ class Scratch3YoloBitMqtt {
                     opcode: 'mqtt_connect_server',
                     rawCode: {
                         imports: 'from mqtt import *\n',
-                        code:'mqtt.connect_broker(server=/*{SERVER}*/, port=1883, username=/*{USERNAME}*/, password=/*{PASSWORD}*/)\n'
+                        code:"mqtt.connect_broker(server='/*{SERVER}*/', port=1883, username=/*{USERNAME}*/, password=/*{KEY}*/)\n"
                     },
                     text: [
                         {
-                            default: 'kết nối đến server [SERVER] với username[USERNAME] mật khẩu [PASSWORD]',
+                            default: 'kết nối đến server [SERVER] với username[USERNAME] key [KEY]',
                             id: "gui.externalExtension.YoloBitMqttExtension.mqtt_connect_server"
                         }
                     ],
@@ -58,9 +58,9 @@ class Scratch3YoloBitMqtt {
                             type: Scratch.ArgumentType.STRING,
                             defaultValue: 'tài khoản'
                         },
-                        PASSWORD: {
+                        KEY: {
                             type: Scratch.ArgumentType.STRING,
-                            defaultValue: 'mật khẩu'
+                            defaultValue: ''
                         },
                         SERVER: {
                             menu: 'servers'
@@ -115,24 +115,24 @@ class Scratch3YoloBitMqtt {
                     opcode: 'mqtt_receie_topic',
                     rawCode: {
                         imports: 'from mqtt import *\n',
-                        function: 'def on_mqtt_message_receive_callback__topic_(th_C3_B4ng_tin):\n' +
+                        function: 'def on_mqtt_message_receive_callback__V/*{FEEDS}*/_(th_C3_B4ng_tin):\n' +
                                 '/*{DO}*/' +
                                 '    pass\n',
                         setup: '',
-                        code: 'mqtt.on_receive_message(/*{TOPIC}*/, on_mqtt_message_receive_callback__/*{TOPIC}*/_)',
+                        code: 'mqtt.on_receive_message(/*{TOPIC}*/, on_mqtt_message_receive_callback__V/*{FEEDS}*/_)',
                         loop: ''
                     },
                     text: [
                         {
-                            default: 'khi nhận được thông tin từ chủ đề [TOPIC] ',
+                            default: 'khi nhận được thông tin từ chủ đề V[TOPIC] ',
                             id: 'gui.extension.YoloBitMqttExtension.mqtt_receie_topic'
                         },
                         '[DO]'
                     ],
                     arguments: {    
                         TOPIC: {
-                            type: Scratch.ArgumentType.STRING,
-                            defaultValue: 'V1'
+                            type: Scratch.ArgumentType.NUMBER,
+                            defaultValue: '1'
                         },                    
                         DO: {
                             type: Scratch.ArgumentType.STATEMENT
