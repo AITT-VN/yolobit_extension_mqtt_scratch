@@ -118,8 +118,8 @@ class Scratch3YoloBitMqtt {
                         function: 'def on_mqtt_message_receive_callback__topic_(th_C3_B4ng_tin):\n' +
                                 '/*{DO}*/' +
                                 '    pass\n',
-                        setup: 'mqtt.on_receive_message(/*{TOPIC}*/, on_mqtt_message_receive_callback__/*{TOPIC}*/_)',
-                        code: '',
+                        setup: '',
+                        code: 'mqtt.on_receive_message(/*{TOPIC}*/, on_mqtt_message_receive_callback__/*{TOPIC}*/_)',
                         loop: ''
                     },
                     text: [
