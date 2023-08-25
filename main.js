@@ -59,8 +59,7 @@ class Scratch3YoloBitMqtt {
                             defaultValue: 'tài khoản'
                         },
                         KEY: {
-                            type: Scratch.ArgumentType.STRING,
-                            defaultValue: ''
+                            type: Scratch.ArgumentType.STRING
                         },
                         SERVER: {
                             menu: 'servers'
@@ -124,7 +123,7 @@ class Scratch3YoloBitMqtt {
                     },
                     text: [
                         {
-                            default: 'khi nhận được thông tin từ chủ đề V[TOPIC] ',
+                            default: 'khi nhận được thông tin từ chủ đề V[FEEDS] ',
                             id: 'gui.extension.YoloBitMqttExtension.mqtt_receie_topic'
                         },
                         '[DO]'
@@ -132,7 +131,7 @@ class Scratch3YoloBitMqtt {
                     arguments: {    
                         TOPIC: {
                             type: Scratch.ArgumentType.NUMBER,
-                            defaultValue: '1'
+                            defaultValue: 1
                         },                    
                         DO: {
                             type: Scratch.ArgumentType.STATEMENT
