@@ -109,7 +109,7 @@ class Scratch3YoloBitMqtt {
                     arguments: {
                         
                     },
-                    blockType: Scratch.BlockType.NUMBER
+                    blockType: Scratch.BlockType.COMMAND
                 },
                 {
                     opcode: 'mqtt_receie_topic',
@@ -138,8 +138,8 @@ class Scratch3YoloBitMqtt {
                             type: Scratch.ArgumentType.STATEMENT
                         }
                     },
-                    disablePreviousStatement: true,
-                    disableNextStatement: true,
+                    disablePreviousStatement: false,
+                    disableNextStatement: false,
                     blockType: Scratch.BlockType.CUSTOM
                 }           
             ],

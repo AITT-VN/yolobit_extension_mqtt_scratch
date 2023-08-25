@@ -1,10 +1,10 @@
 {
-    "id": "YoloBitAIoTExtension",
+    "id": "YoloBitMqttExtension",
     "extensionDisplay": {
-        "name": "gui.externalExtension.YoloBitAIoTExtension.name",
+        "name": "gui.externalExtension.YoloBitMqttExtension.name",
         "iconURL": "/images/mqtt01.jpg",
         "insetIconURL": "/images/mqtt01.jpg",
-        "description": "gui.externalExtension.YoloBitAIoTExtension.description"
+        "description": "gui.externalExtension.YoloBitMqttExtension.description"
     },
     "translate": {
         "vi": {
