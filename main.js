@@ -96,8 +96,8 @@ class Scratch3YoloBitMqtt {
                 {
                     opcode: 'mqtt_update',
                     rawCode: {
-                        imports: 'from mqtt import *\n\n',
-                        code:'mqtt.check_message()'
+                        imports: 'from mqtt import *\n',
+                        code:'mqtt.check_message()\n'
                     },
                     text: [
                         {
@@ -118,7 +118,7 @@ class Scratch3YoloBitMqtt {
                                 '/*{DO}*/' +
                                 '    pass\n',
                         setup: '',
-                        code: "mqtt.on_receive_message('V/*{FEEDS}*/', on_mqtt_message_receive_callback__V/*{FEEDS}*/_)",
+                        code: "mqtt.on_receive_message('V/*{FEEDS}*/', on_mqtt_message_receive_callback__V/*{FEEDS}*/_)\n",
                         loop: ''
                     },
                     text: [
