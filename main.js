@@ -129,8 +129,8 @@ class Scratch3YoloBitMqtt {
                     ],
                     arguments: {    
                         FEEDS: {
-                            type: Scratch.ArgumentType.NUMBER,
-                            defaultValue: 1
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: 'V1'
                         },                    
                         DO: {
                             type: Scratch.ArgumentType.STATEMENT
