@@ -111,19 +111,19 @@ class Scratch3YoloBitMqtt {
                     blockType: Scratch.BlockType.COMMAND
                 },
                 {
-                    opcode: 'mqtt_receive_topic',
+                    opcode: 'mqtt_receie_topic',
                     rawCode: {
                         imports: 'from mqtt import *\n'
                     },
                     customGenerator: "const noQuoteTopic = args.FEEDS.slice(1,-1);\n"
                         + "return {"
-                        + "function: `def on_mqtt_message_receive_callback__${noQuoteTopic}:\n    /*{DO}*/,`+ '    pass\n'"
-                        + "code: `mqtt.on_receive_message('${noQuoteTopic}', on_mqtt_message_receive_callback__${noQuoteTopic})`"
+                        + "'function': `def on_mqtt_message_receive_callback__${noQuoteTopic}:\n${args.DO},`+ '    pass\n'"
+                        + "'code': `mqtt.on_receive_message('${noQuoteTopic}', on_mqtt_message_receive_callback__${noQuoteTopic})`"
                         + "}",
                     text: [
                         {
                             default: 'khi nhận được thông tin từ chủ đề [FEEDS] ',
-                            id: 'gui.extension.YoloBitMqttExtension.mqtt_receive_topic'
+                            id: 'gui.extension.YoloBitMqttExtension.mqtt_receie_topic'
                         },
                         '[DO]'
                     ],
