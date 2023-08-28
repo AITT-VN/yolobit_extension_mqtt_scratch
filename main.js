@@ -11,6 +11,7 @@ class Scratch3YoloBitMqtt {
             name: 'MQTT',
             blockIconURI: iconURL,
             allowBlockTypes: {
+                mqtt_receive_topic: -1,
             },
             color1: '#e65722',
             color2: '#e65722',
@@ -111,7 +112,7 @@ class Scratch3YoloBitMqtt {
                     blockType: Scratch.BlockType.COMMAND
                 },
                 {
-                    opcode: 'mqtt_receie_topic',
+                    opcode: 'mqtt_receive_topic',
                     rawCode: {
                         imports: 'import time\nfrom mqtt import *\n'
                     },
@@ -123,7 +124,7 @@ class Scratch3YoloBitMqtt {
                     text: [
                         {
                             default: 'khi nhận được thông tin từ chủ đề [FEEDS] ',
-                            id: 'gui.extension.YoloBitMqttExtension.mqtt_receie_topic'
+                            id: 'gui.extension.YoloBitMqttExtension.mqtt_receive_topic'
                         },
                         '[DO]'
                     ],
@@ -136,8 +137,8 @@ class Scratch3YoloBitMqtt {
                             type: Scratch.ArgumentType.STATEMENT
                         }
                     },
-                    disablePreviousStatement: false,
-                    disableNextStatement: false,
+                    disablePreviousStatement: true,
+                    disableNextStatement: true,
                     blockType: Scratch.BlockType.CUSTOM
                 },
                 {
