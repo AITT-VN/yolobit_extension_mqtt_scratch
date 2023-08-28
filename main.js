@@ -113,12 +113,12 @@ class Scratch3YoloBitMqtt {
                 {
                     opcode: 'mqtt_receie_topic',
                     rawCode: {
-                        imports: 'from mqtt import *\n'
+                        imports: 'import time\nfrom mqtt import *\n'
                     },
                     customGenerator: "const noQuoteTopic = args.FEEDS.slice(1,-1);\n"
                         + "return {"
                         + "'function': `def on_mqtt_message_receive_callback__${noQuoteTopic}:\\n${args.DO}`+ '    pass\\n',"
-                        + "'code': `mqtt.on_receive_message('${noQuoteTopic}', on_mqtt_message_receive_callback__${noQuoteTopic})`"
+                        + "'loop': `mqtt.check_message()\\ntime.sleep_ms(1000)`"
                         + "}",
                     text: [
                         {
@@ -139,6 +139,29 @@ class Scratch3YoloBitMqtt {
                     disablePreviousStatement: false,
                     disableNextStatement: false,
                     blockType: Scratch.BlockType.CUSTOM
+                },
+                {
+                    opcode: 'mqtt_registor_topic',
+                    rawCode: {
+                        imports: 'from mqtt import *\n'
+                    },
+                    customGenerator: "const noQuoteTopic = args.FEEDS.slice(1,-1);\n"
+                        + "return {"
+                        + "'code': `mqtt.on_receive_message('${noQuoteTopic}', on_mqtt_message_receive_callback__${noQuoteTopic})`"
+                        + "}",
+                    text: [
+                        {
+                            default: 'đăng kí kênh [FEEDS] ',
+                            id: 'gui.extension.YoloBitMqttExtension.mqtt_registor_topic'
+                        }
+                    ],
+                    arguments: {    
+                        FEEDS: {
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: 'V1'
+                        }
+                    },
+                    blockType: Scratch.BlockType.COMMAND
                 },
                 {
                     opcode: 'mqtt_message',
