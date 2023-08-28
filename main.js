@@ -95,23 +95,6 @@ class Scratch3YoloBitMqtt {
                     blockType: Scratch.BlockType.COMMAND
                 },
                 {
-                    opcode: 'mqtt_update',
-                    rawCode: {
-                        imports: 'from mqtt import *\n',
-                        code:'mqtt.check_message()\n'
-                    },
-                    text: [
-                        {
-                            default: 'cập nhật thông tin từ server',
-                            id: "gui.externalExtension.YoloBitMqttExtension.mqtt_update"
-                        }
-                    ],
-                    arguments: {
-                        
-                    },
-                    blockType: Scratch.BlockType.COMMAND
-                },
-                {
                     opcode: 'mqtt_receive_topic',
                     rawCode: {
                         imports: 'import time\nfrom mqtt import *\n'
@@ -148,7 +131,7 @@ class Scratch3YoloBitMqtt {
                     },
                     customGenerator: "const noQuoteTopic = args.FEEDS.slice(1,-1);\n"
                         + "return {"
-                        + "'code': `mqtt.on_receive_message('${noQuoteTopic}', on_mqtt_message_receive_callback__${noQuoteTopic})`"
+                        + "'code': `mqtt.on_receive_message('${noQuoteTopic}', on_mqtt_message_receive_callback__${noQuoteTopic})\\n`"
                         + "}",
                     text: [
                         {
