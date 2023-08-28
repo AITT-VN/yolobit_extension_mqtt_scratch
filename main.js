@@ -102,7 +102,7 @@ class Scratch3YoloBitMqtt {
                     },
                     customGenerator: "const noQuoteTopic = args.FEEDS.slice(1,-1);\n"
                         + "return {"
-                        + "'function': `def on_mqtt_message_receive_callback__${noQuoteTopic}:\\n${args.DO}`+ '    pass\\n',"
+                        + "'function': `def on_mqtt_message_receive_callback__${noQuoteTopic}(th_C3_B4ng_tin):\\n${args.DO}`+ '    pass\\n',"
                         + "}",
                     text: [
                         {
