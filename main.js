@@ -45,7 +45,8 @@ class Scratch3YoloBitMqtt {
                     opcode: 'mqtt_connect_server',
                     rawCode: {
                         imports: 'from mqtt import *\n',
-                        code:"mqtt.connect_broker(server='/*{SERVER}*/', port=1883, username=/*{USERNAME}*/, password=/*{KEY}*/)\n"
+                        code:"mqtt.connect_broker(server='/*{SERVER}*/', port=1883, username=/*{USERNAME}*/, password=/*{KEY}*/)\n",
+                        loop:"mqtt.check_message()\ntime.sleep_ms(1000)\n"
                     },
                     text: [
                         {
@@ -102,7 +103,6 @@ class Scratch3YoloBitMqtt {
                     customGenerator: "const noQuoteTopic = args.FEEDS.slice(1,-1);\n"
                         + "return {"
                         + "'function': `def on_mqtt_message_receive_callback__${noQuoteTopic}:\\n${args.DO}`+ '    pass\\n',"
-                        + "'loop': `mqtt.check_message()\\ntime.sleep_ms(1000)`"
                         + "}",
                     text: [
                         {
